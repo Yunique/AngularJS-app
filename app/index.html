@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple app</title>
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="RoutingApp">
+<div id="nav">
+    <ul class="navigation">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/age">Age</a></li>
+        <li><a href="#/calculating">Calculating</a></li>
+    </ul>
+</div>
+<div ng-view>
+</div>
+
+</body>
+</html>
+
+
+<!--<div>-->
+<!--<label for="name" class="fnt fsz">Your Name:</label>-->
+<!--<br>-->
+<!--<input type="text" id="name" placeholder="Enter your name here..." ng-model="yourName">-->
+<!--<h1 class="fnt">Hello {{yourName}}!</h1>-->
+<!--</div>-->

@@ -1,0 +1,27 @@
+<div ng-controller="calcCtrl">
+    <form ng-submit="add(element)">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td ng-bind="elements.length+1"></td>
+                <td><input ng-model="element.value" type="text" required/></td>
+                <td>
+                    <button class="btn" type="submit">Add</button>
+                </td>
+            </tr>
+            <tr ng-repeat="p in elements track by $index">
+                <td ng-bind="$index+1+'.'"></td>
+                <td ng-bind="p" class='fnt2'></td>
+                <td>
+                    <span ng-click="removeItem($index)" class="remove btn">remove</span>
+                </td>
+            </tr>
+            <tr>
+                <th class='fnt2 fsz'>Total:</th>
+                <th><span ng-bind="total"></span></th>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+

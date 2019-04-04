@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+
+@text: #f2e6d5;
+@col1: #010b0c;
+@col2: lighten(@col1, 30%);
+@col3: red;
+
+li {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+
+#nav {
+  box-sizing: border-box;
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      border-right: 2px solid white;
+      border-radius: 5px;
+      margin-top: 3px;
+      .gradient(@col2, @col1);
+
+      &:hover {
+        .gradient(@col1, @col2);
+      }
+
+      a {
+        text-decoration: none;
+        color: @text;
+        font-size: 20px;
+        padding: 15px;
+        font-family: sans-serif;
+        display: inline-block;
+
+      }
+    }
+  }
+}
+
+.gradient(@firstColor, @secondColor) {
+  background-color: @firstColor;
+  background-image: -webkit-linear-gradient(top, @firstColor, @secondColor);
+  background-image: -moz-linear-gradient(top, @firstColor, @secondColor);
+  background-image: -ms-linear-gradient(top, @firstColor, @secondColor);
+  background-image: -o-linear-gradient(top, @firstColor, @secondColor);
+  background-image: linear-gradient(top, @firstColor, @secondColor);
+}
+
+.remove {
+  color: @text;
+  background: @col3;
+  border-radius: 50% 30%;
+  font-size: 15px;
+  font-style: italic;
+  padding: 2px;
+
+  &:hover {
+    color: lighten(@text, 10%);
+    font-style: normal.gradient(@col1, @col2);
+  }
+}
+
+.fnt {
+  font-family: 'Kalam', cursive;
+}
+
+.fnt2 {
+  font-family: 'Overlock', cursive;
+}
+
+.fsz {
+  font-size: 22px;
+}
